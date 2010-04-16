@@ -3,7 +3,7 @@ Web-ContextPath: kasse
 Bundle-ManifestVersion: 2
 Bundle-Name: Basar Kasse Webbapp
 Bundle-SymbolicName: org.osgiusers.germany.example.kasse.webapp
-Bundle-Version: 1.0.0
+Bundle-Version: 1.0.0.qualifier
 Bundle-ClassPath: WEB-INF/lib/spring-jsf.jar,
  WEB-INF/lib/jsf-api.jar,
  WEB-INF/lib/jsf-impl.jar,
