@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?pde version="3.5"?>
+
+<product name="OSGi Users Example Kasse" uid="org.osgiusers.germany.example.kasse" application="org.eclipse.ui.ide.workbench" version="0.0.0" useFeatures="true" includeLaunchers="true">
+
+   <configIni use="default">
+   </configIni>
+
+   <launcherArgs>
+      <programArgs>-console</programArgs>
+      <vmArgs>-Declipse.ignoreApp=true -Dosgi.noShutdown=true</vmArgs>
+      <vmArgsMac>-XstartOnFirstThread -Dorg.eclipse.swt.internal.carbon.smallFonts</vmArgsMac>
+   </launcherArgs>
+
+   <launcher name="kasse">
+      <solaris/>
+      <win useIco="false">
+         <bmp/>
+      </win>
+   </launcher>
+
+   <vm>
+   </vm>
+
+   <plugins>
+      <plugin id="JavaRuntime" fragment="true"/>
+      <plugin id="catalina.config" fragment="true"/>
+      <plugin id="com.springsource.antlr"/>
+      <plugin id="com.springsource.com.sun.el"/>
+      <plugin id="com.springsource.com.sun.faces"/>
+      <plugin id="com.springsource.edu.oswego.cs.dl.util.concurrent"/>
+      <plugin id="com.springsource.javassist"/>
+      <plugin id="com.springsource.javax.activation"/>
+      <plugin id="com.springsource.javax.annotation"/>
+      <plugin id="com.springsource.javax.ejb"/>
+      <plugin id="com.springsource.javax.el"/>
+      <plugin id="com.springsource.javax.faces"/>
+      <plugin id="com.springsource.javax.mail"/>
+      <plugin id="com.springsource.javax.persistence"/>
+      <plugin id="com.springsource.javax.servlet"/>
+      <plugin id="com.springsource.javax.servlet.jsp"/>
+      <plugin id="com.springsource.javax.servlet.jsp.jstl"/>
+      <plugin id="com.springsource.javax.transaction"/>
+      <plugin id="com.springsource.javax.xml.bind"/>
+      <plugin id="com.springsource.javax.xml.rpc"/>
+      <plugin id="com.springsource.javax.xml.soap"/>
+      <plugin id="com.springsource.javax.xml.stream"/>
+      <plugin id="com.springsource.javax.xml.ws"/>
+      <plugin id="com.springsource.junit"/>
+      <plugin id="com.springsource.net.sf.cglib"/>
+      <plugin id="com.springsource.org.aopalliance"/>
+      <plugin id="com.springsource.org.apache.catalina"/>
+      <plugin id="com.springsource.org.apache.commons.beanutils"/>
+      <plugin id="com.springsource.org.apache.commons.collections"/>
+      <plugin id="com.springsource.org.apache.commons.dbcp"/>
+      <plugin id="com.springsource.org.apache.commons.digester"/>
+      <plugin id="com.springsource.org.apache.commons.logging"/>
+      <plugin id="com.springsource.org.apache.commons.pool"/>
+      <plugin id="com.springsource.org.apache.coyote" fragment="true"/>
+      <plugin id="com.springsource.org.apache.derby"/>
+      <plugin id="com.springsource.org.apache.el"/>
+      <plugin id="com.springsource.org.apache.jasper" fragment="true"/>
+      <plugin id="com.springsource.org.apache.jasper.org.eclipse.jdt"/>
+      <plugin id="com.springsource.org.apache.juli.extras"/>
+      <plugin id="com.springsource.org.apache.log4j"/>
+      <plugin id="com.springsource.org.apache.taglibs.standard"/>
+      <plugin id="com.springsource.org.apache.xmlcommons"/>
+      <plugin id="com.springsource.org.aspectj.tools"/>
+      <plugin id="com.springsource.org.aspectj.weaver"/>
+      <plugin id="com.springsource.org.dom4j"/>
+      <plugin id="com.springsource.org.eclipse.persistence"/>
+      <plugin id="com.springsource.org.eclipse.persistence.antlr"/>
+      <plugin id="com.springsource.org.eclipse.persistence.asm"/>
+      <plugin id="com.springsource.org.eclipse.persistence.jpa" fragment="true"/>
+      <plugin id="com.springsource.org.hibernate"/>
+      <plugin id="com.springsource.org.hibernate.annotations" fragment="true"/>
+      <plugin id="com.springsource.org.hibernate.annotations.common"/>
+      <plugin id="com.springsource.org.hibernate.ejb" fragment="true"/>
+      <plugin id="com.springsource.org.jboss.util"/>
+      <plugin id="com.springsource.org.junit"/>
+      <plugin id="com.springsource.org.objectweb.asm"/>
+      <plugin id="com.springsource.slf4j.api"/>
+      <plugin id="com.springsource.slf4j.jcl" fragment="true"/>
+      <plugin id="com.springsource.slf4j.log4j" fragment="true"/>
+      <plugin id="org.eclipse.equinox.common"/>
+      <plugin id="org.eclipse.equinox.ds"/>
+      <plugin id="org.eclipse.equinox.util"/>
+      <plugin id="org.eclipse.osgi"/>
+      <plugin id="org.eclipse.osgi.services"/>
+      <plugin id="org.osgiusers.germany.example.kasse.domain"/>
+      <plugin id="org.osgiusers.germany.example.kasse.domain.internal"/>
+      <plugin id="org.osgiusers.germany.example.kasse.infrastructure.derby"/>
+      <plugin id="org.osgiusers.germany.example.kasse.repository.hibernate"/>
+      <plugin id="org.osgiusers.germany.example.kasse.webapp"/>
+      <plugin id="org.springframework.aop"/>
+      <plugin id="org.springframework.beans"/>
+      <plugin id="org.springframework.context"/>
+      <plugin id="org.springframework.context.support"/>
+      <plugin id="org.springframework.core"/>
+      <plugin id="org.springframework.jdbc"/>
+      <plugin id="org.springframework.orm"/>
+      <plugin id="org.springframework.osgi.catalina.start.osgi"/>
+      <plugin id="org.springframework.osgi.core"/>
+      <plugin id="org.springframework.osgi.extender"/>
+      <plugin id="org.springframework.osgi.extensions.annotations"/>
+      <plugin id="org.springframework.osgi.io"/>
+      <plugin id="org.springframework.osgi.log4j.config" fragment="true"/>
+      <plugin id="org.springframework.osgi.mock"/>
+      <plugin id="org.springframework.osgi.test"/>
+      <plugin id="org.springframework.osgi.web"/>
+      <plugin id="org.springframework.osgi.web.extender"/>
+      <plugin id="org.springframework.test"/>
+      <plugin id="org.springframework.transaction"/>
+      <plugin id="org.springframework.web"/>
+      <plugin id="org.springframework.web.servlet"/>
+      <plugin id="server.config" fragment="true"/>
+   </plugins>
+
+   <features>
+      <feature id="org.osgiuisers.germany.example.kasse.tp_feature"/>
+      <feature id="org.osgiusers.germany.example.kasse.feature"/>
+   </features>
+
+   <configurations>
+      <plugin id="com.springsource.antlr" autoStart="true" startLevel="0" />
+      <plugin id="com.springsource.com.sun.el" autoStart="true" startLevel="0" />
+      <plugin id="com.springsource.com.sun.faces" autoStart="true" startLevel="0" />
+      <plugin id="com.springsource.edu.oswego.cs.dl.util.concurrent" autoStart="true" startLevel="0" />
+      <plugin id="com.springsource.javassist" autoStart="true" startLevel="0" />
+      <plugin id="com.springsource.javax.activation" autoStart="true" startLevel="0" />
+      <plugin id="com.springsource.javax.annotation" autoStart="true" startLevel="0" />
+      <plugin id="com.springsource.javax.ejb" autoStart="true" startLevel="0" />
+      <plugin id="com.springsource.javax.el" autoStart="true" startLevel="0" />
+      <plugin id="com.springsource.javax.faces" autoStart="true" startLevel="0" />
+      <plugin id="com.springsource.javax.mail" autoStart="true" startLevel="0" />
+      <plugin id="com.springsource.javax.persistence" autoStart="true" startLevel="0" />
+      <plugin id="com.springsource.javax.servlet" autoStart="true" startLevel="0" />
+      <plugin id="com.springsource.javax.servlet.jsp" autoStart="true" startLevel="0" />
+      <plugin id="com.springsource.javax.servlet.jsp.jstl" autoStart="true" startLevel="0" />
+      <plugin id="com.springsource.javax.transaction" autoStart="true" startLevel="0" />
+      <plugin id="com.springsource.javax.xml.bind" autoStart="true" startLevel="0" />
+      <plugin id="com.springsource.javax.xml.rpc" autoStart="true" startLevel="0" />
+      <plugin id="com.springsource.javax.xml.soap" autoStart="true" startLevel="0" />
+      <plugin id="com.springsource.javax.xml.stream" autoStart="true" startLevel="0" />
+      <plugin id="com.springsource.javax.xml.ws" autoStart="true" startLevel="0" />
+      <plugin id="com.springsource.junit" autoStart="true" startLevel="0" />
+      <plugin id="com.springsource.net.sf.cglib" autoStart="true" startLevel="0" />
+      <plugin id="com.springsource.org.aopalliance" autoStart="true" startLevel="0" />
+      <plugin id="com.springsource.org.apache.catalina" autoStart="true" startLevel="0" />
+      <plugin id="com.springsource.org.apache.commons.beanutils" autoStart="true" startLevel="0" />
+      <plugin id="com.springsource.org.apache.commons.collections" autoStart="true" startLevel="0" />
+      <plugin id="com.springsource.org.apache.commons.dbcp" autoStart="true" startLevel="0" />
+      <plugin id="com.springsource.org.apache.commons.digester" autoStart="true" startLevel="0" />
+      <plugin id="com.springsource.org.apache.commons.logging" autoStart="true" startLevel="0" />
+      <plugin id="com.springsource.org.apache.commons.pool" autoStart="true" startLevel="0" />
+      <plugin id="com.springsource.org.apache.derby" autoStart="true" startLevel="0" />
+      <plugin id="com.springsource.org.apache.el" autoStart="true" startLevel="0" />
+      <plugin id="com.springsource.org.apache.jasper.org.eclipse.jdt" autoStart="true" startLevel="0" />
+      <plugin id="com.springsource.org.apache.juli.extras" autoStart="true" startLevel="0" />
+      <plugin id="com.springsource.org.apache.log4j" autoStart="true" startLevel="0" />
+      <plugin id="com.springsource.org.apache.taglibs.standard" autoStart="true" startLevel="0" />
+      <plugin id="com.springsource.org.apache.xmlcommons" autoStart="true" startLevel="0" />
+      <plugin id="com.springsource.org.aspectj.tools" autoStart="true" startLevel="0" />
+      <plugin id="com.springsource.org.aspectj.weaver" autoStart="true" startLevel="0" />
+      <plugin id="com.springsource.org.dom4j" autoStart="true" startLevel="0" />
+      <plugin id="com.springsource.org.eclipse.persistence" autoStart="true" startLevel="0" />
+      <plugin id="com.springsource.org.eclipse.persistence.antlr" autoStart="true" startLevel="0" />
+      <plugin id="com.springsource.org.eclipse.persistence.asm" autoStart="true" startLevel="0" />
+      <plugin id="com.springsource.org.hibernate" autoStart="true" startLevel="0" />
+      <plugin id="com.springsource.org.hibernate.annotations.common" autoStart="true" startLevel="0" />
+      <plugin id="com.springsource.org.jboss.util" autoStart="true" startLevel="0" />
+      <plugin id="com.springsource.org.junit" autoStart="true" startLevel="0" />
+      <plugin id="com.springsource.org.objectweb.asm" autoStart="true" startLevel="0" />
+      <plugin id="com.springsource.slf4j.api" autoStart="true" startLevel="0" />
+      <plugin id="org.eclipse.equinox.common" autoStart="true" startLevel="2" />
+      <plugin id="org.eclipse.equinox.ds" autoStart="true" startLevel="1" />
+      <plugin id="org.eclipse.equinox.util" autoStart="true" startLevel="0" />
+      <plugin id="org.eclipse.osgi" autoStart="true" startLevel="-1" />
+      <plugin id="org.eclipse.osgi.services" autoStart="true" startLevel="0" />
+      <plugin id="org.osgiusers.germany.example.kasse.domain" autoStart="true" startLevel="0" />
+      <plugin id="org.osgiusers.germany.example.kasse.domain.internal" autoStart="true" startLevel="0" />
+      <plugin id="org.osgiusers.germany.example.kasse.infrastructure.derby" autoStart="true" startLevel="0" />
+      <plugin id="org.osgiusers.germany.example.kasse.repository.hibernate" autoStart="true" startLevel="0" />
+      <plugin id="org.osgiusers.germany.example.kasse.webapp" autoStart="true" startLevel="0" />
+      <plugin id="org.springframework.aop" autoStart="true" startLevel="0" />
+      <plugin id="org.springframework.beans" autoStart="true" startLevel="0" />
+      <plugin id="org.springframework.context" autoStart="true" startLevel="0" />
+      <plugin id="org.springframework.context.support" autoStart="true" startLevel="0" />
+      <plugin id="org.springframework.core" autoStart="true" startLevel="0" />
+      <plugin id="org.springframework.jdbc" autoStart="true" startLevel="0" />
+      <plugin id="org.springframework.orm" autoStart="true" startLevel="0" />
+      <plugin id="org.springframework.osgi.catalina.start.osgi" autoStart="true" startLevel="0" />
+      <plugin id="org.springframework.osgi.core" autoStart="true" startLevel="0" />
+      <plugin id="org.springframework.osgi.extender" autoStart="true" startLevel="0" />
+      <plugin id="org.springframework.osgi.extensions.annotations" autoStart="true" startLevel="0" />
+      <plugin id="org.springframework.osgi.io" autoStart="true" startLevel="0" />
+      <plugin id="org.springframework.osgi.mock" autoStart="true" startLevel="0" />
+      <plugin id="org.springframework.osgi.test" autoStart="true" startLevel="0" />
+      <plugin id="org.springframework.osgi.web" autoStart="true" startLevel="0" />
+      <plugin id="org.springframework.osgi.web.extender" autoStart="true" startLevel="5" />
+      <plugin id="org.springframework.test" autoStart="true" startLevel="0" />
+      <plugin id="org.springframework.transaction" autoStart="true" startLevel="0" />
+      <plugin id="org.springframework.web" autoStart="true" startLevel="0" />
+      <plugin id="org.springframework.web.servlet" autoStart="true" startLevel="0" />
+   </configurations>
+
+</product>

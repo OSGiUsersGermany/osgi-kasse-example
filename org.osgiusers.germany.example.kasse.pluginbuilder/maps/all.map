@@ -1,0 +1,13 @@
+feature@org.osgiusers.germany.example.kasse.feature=COPY,/Users/Markus/workspaces/osgi_build_ws,org.osgiusers.germany.example.kasse.feature
+fragment@catalina.config=COPY,/Users/Markus/workspaces/osgiworkshop_git/osgi-kasse-example,catalina.config
+plugin@org.osgiusers.germany.example.kasse.domain=COPY,/Users/Markus/workspaces/osgiworkshop_git/osgi-kasse-example,org.osgiusers.germany.example.kasse.domain
+plugin@org.osgiusers.germany.example.kasse.domain.internal=COPY,/Users/Markus/workspaces/osgiworkshop_git/osgi-kasse-example,org.osgiusers.germany.example.kasse.domain.internal
+plugin@org.osgiusers.germany.example.kasse.infrastructure.derby=COPY,/Users/Markus/workspaces/osgiworkshop_git/osgi-kasse-example,org.osgiusers.germany.example.kasse.infrastructure.derby
+plugin@org.osgiusers.germany.example.kasse.repository.hibernate=COPY,/Users/Markus/workspaces/osgiworkshop_git/osgi-kasse-example,org.osgiusers.germany.example.kasse.repository.hibernate
+plugin@org.osgiusers.germany.example.kasse.webapp=COPY,/Users/Markus/workspaces/osgiworkshop_git/osgi-kasse-example,org.osgiusers.germany.example.kasse.webapp
+fragment@org.springframework.osgi.log4j.config=COPY,/Users/Markus/workspaces/osgiworkshop_git/osgi-kasse-example,org.springframework.osgi.log4j.config
+fragment@server.config=COPY,/Users/Markus/workspaces/osgiworkshop_git/osgi-kasse-example,server.config
+fragment@JavaRuntime=COPY,/Users/Markus/workspaces/osgiworkshop_git/osgi-kasse-example,JavaRuntime
+feature@org.osgiuisers.germany.example.kasse.tp_feature=COPY,/Users/Markus/workspaces/osgi_build_ws,org.osgiuisers.germany.example.kasse.tp-feature
+feature@org.osgiusers.germany.example.kasse.test_feature=COPY,/Users/Markus/workspaces/osgi_build_ws,org.osgiusers.germany.example.kasse.test-feature
+plugin@org.osgiusers.germany.example.kasse.webtest=COPY,/Users/Markus/workspaces/osgi_build_ws,org.osgiusers.germany.example.kasse.webtest
