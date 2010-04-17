@@ -117,7 +117,7 @@
    </plugins>
 
    <features>
-      <feature id="org.osgiuisers.germany.example.kasse.tp_feature"/>
+      <feature id="org.osgiusers.germany.example.kasse.tp_feature"/>
       <feature id="org.osgiusers.germany.example.kasse.feature"/>
    </features>
 
