@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+<project name="build-kasse-macros"
+         basedir="."
+         xmlns:ant4eclipse="antlib:org.ant4eclipse"
+         xmlns:ac="antlib:net.sf.antcontrib">
+
+	<!-- ~~~ PUBLIC ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+	<!-- Appends a value to a list.                                                              -->
+	<!--                                                                                         -->
+	<!-- @param property    The name of the variable used to contain a list.                     -->
+	<!-- @param value       The value which has to be added.                                     -->
+	<!-- @param delimiter   The delimiter which has to be used. (Default: ',')                   -->
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+	<macrodef name="append">
+		<attribute name="property" />
+		<attribute name="value" />
+		<attribute name="delimiter" default="," />
+		<sequential>
+			<ac:if>
+				<equals arg1="${@{property}}" arg2="" />
+				<ac:then>
+					<ac:var name="@{property}" value="@{value}" />
+				</ac:then>
+				<ac:else>
+					<ac:var name="@{property}"
+					        value="${@{property}}@{delimiter}@{value}" />
+				</ac:else>
+			</ac:if>
+		</sequential>
+	</macrodef>
+
+	<!-- 
+	 I Runs all tests in the specified project
+	 I
+	 I (Note: an executeJunitLauncher-task or -macro will be provided by one of the upcoming ant4eclipse releases
+	 I to make executing junit tests easier)
+	 -->
+	<macrodef name="runTests">
+		<attribute name="projectName" />
+		<attribute name="workspaceDirectory" />
+		<attribute name="targetPlatformId" />
+		<attribute name="reportDirectory" />
+		<attribute name="includeTests" default="**/*Test.java" />
+		<attribute name="excludeTests" />
+		<sequential>
+			<!-- Get runtime classpath of the test project -->
+			<ant4eclipse:getJdtClassPath classpathId="_runTests.classpath"
+			                             runtime="true"
+			                             projectname="@{projectName}"
+			                             workspacedirectory="@{workspaceDirectory}">
+				<ant4eclipse:jdtClasspathContainerArgument key="target.platform"
+				                                           value="@{targetPlatformId}" />
+
+			</ant4eclipse:getJdtClassPath>
+
+			<!-- Get source path (that contains the test classes) of the test project -->
+			<ant4eclipse:getJdtSourcePath property="_runTests.sourceFolder"
+			                              projectname="@{projectName}"
+			                              workspacedirectory="@{workspaceDirectory}" />
+
+			<!-- Execute tests -->
+			<junit showoutput="false"
+			       dir="@{workspaceDirectory}/@{projectName}">
+				<classpath refid="_runTests.classpath" />
+
+				<batchtest fork="true" todir="@{reportDirectory}">
+					<fileset dir="${_runTests.sourceFolder}"
+					         includes="@{includeTests}"
+					         excludes="@{excludeTests}" />
+
+					<formatter type="xml" />
+				</batchtest>
+			</junit>
+
+			<!-- Generate HTML report -->
+			<junitreport todir="@{reportDirectory}">
+				<fileset dir="@{reportDirectory}" includes="TEST-*.xml" />
+				<report todir="@{reportDirectory}" />
+			</junitreport>
+
+			<delete>
+				<fileset dir="@{reportDirectory}" includes="*.xml" />
+			</delete>
+
+		</sequential>
+	</macrodef>
+
+</project>

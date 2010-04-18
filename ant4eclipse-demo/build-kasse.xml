@@ -1,0 +1,213 @@
+<?xml version="1.0"?>
+<project name="build-kasse"
+         basedir="."
+         default="build-all"
+         xmlns:ant4eclipse="antlib:org.ant4eclipse"
+         xmlns:ac="antlib:net.sf.antcontrib">
+
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+	<!--                               tasks & macros                                            -->
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+	<!-- define ant4eclipse tasks -->
+	<taskdef uri="antlib:org.ant4eclipse"
+	         resource="org/ant4eclipse/antlib.xml" />
+
+	<!-- define ant-contrib tasks -->
+	<taskdef uri="antlib:net.sf.antcontrib"
+	         resource="net/sf/antcontrib/antlib.xml" />
+
+	<!-- import the ant4eclipse macros -->
+	<import file="${basedir}/ant4eclipse/macros/a4e-jdt-macros.xml" />
+	<import file="${basedir}/ant4eclipse/macros/a4e-pde-macros.xml" />
+
+	<!-- import kasse macros -->
+	<import file="${basedir}/build-kasse-macros.xml" />
+
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+	<!--                                 configuration                                           -->
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+	<!-- read properties -->
+	<property file="${basedir}/build-kasse.properties" />
+
+	<!-- define your jdk location here -->
+	<ant4eclipse:installedJREs default="jdk_15">
+		<jre id="jdk_15" location="${jdk_15.home}" />
+		<jre id="jdk_16" location="${jdk_16.home}" />
+	</ant4eclipse:installedJREs>
+
+	<!-- define the target platform -->
+	<!-- (Note: support for Eclipse target platform definitions will be supported by ant4eclipse,
+	     see AE-79) --> 
+	<ant4eclipse:targetPlatform id="targetPlatform.kasse">
+		<location dir="${workspaceDirectory}/osgi-plattform/target" />
+	</ant4eclipse:targetPlatform>
+
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+	<!--                                   targets                                               -->
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+	
+	<!--
+	 I This target builds all plug-ins in the 'kasse' workspace
+	 -->
+	<target name="build-plugins">
+		<!-- iterate over all projects in the workspace -->
+		<ant4eclipse:executeProjectSet workspaceDirectory="${workspaceDirectory}"
+		                               allWorkspaceProjects="true">
+
+			<!-- Filter only plug-in projects -->
+			<ant4eclipse:forEachProject filter="(executeProjectSet.org.eclipse.pde.PluginNature=*)">
+
+				<!-- call ant4eclipse buildPlugin macro to actually build the plug-in -->
+				<buildPlugin workspaceDirectory="${workspaceDirectory}"
+				             projectname="${executeProjectSet.project.name}"
+				             targetplatformid="targetPlatform.kasse"
+				             destination="${destinationDirectory}" >
+					
+					<initialize>
+							<echo>Going to build bundle ${buildPlugin.project.name} with new version ${buildPlugin.newBundleVersion}</echo>
+					</initialize>
+					
+				</buildPlugin>
+			
+			</ant4eclipse:forEachProject>
+		</ant4eclipse:executeProjectSet>
+	</target>
+
+	<!--
+	 I Build the integrationtest project and execute its tests
+	 -->
+	<target name="execute-integrationtest">
+		<!-- Clean 'reports' directory -->
+		<scrub-directory dir="${reportsDirectory}" />
+
+		<!--
+		 I Build the 'integrationtest' JDT-project using ant4eclipse 'buildJdtProject' macro 
+		 -->
+		<buildJdtProject workspaceDirectory="${workspaceDirectory}"
+		                 projectName="org.osgiusers.germany.example.kasse.domain.internal.integrationtest"
+		                 targetPlatformId="targetPlatform.kasse" />
+
+		<!-- 
+		 I Run tests
+		-->
+		<runTests projectname="org.osgiusers.germany.example.kasse.domain.internal.integrationtest"
+		          workspacedirectory="${workspaceDirectory}"
+		          reportDirectory="${reportsDirectory}"
+		          targetPlatformId="targetPlatform.kasse"
+		          includeTests="**/*Test.java"
+		          excludeTests="**/DatabaseTest.java" />
+
+	</target>
+
+	<!--
+	 I Builds the distribution, i.e. copies bundles from target platform and generates config.ini
+	 I
+	 I Both config.ini file and start script are generated based on the settings made in the
+	 I 'kasse' launch configuration file
+	 -->
+	<target name="build-distribution">
+		<!-- Clean 'distribution' directory -->
+		<scrub-directory dir="${distributionDirectory}" />
+		<mkdir dir="${distributionDirectory}/configuration" />
+		<mkdir dir="${distributionDirectory}/plugins" />
+
+		<!-- Copy the bundles that just have been built to distribution directory -->
+		<copy todir="${distributionDirectory}/plugins">
+			<fileset dir="${destinationDirectory}/plugins"
+			         includes="*.jar"
+			         excludes="*.source_*" />
+		</copy>
+
+		<!-- This variable will hold the list of all selected bundles including their startlevel -->
+		<ac:var name="config_ini_osgi_bundles" value="" />
+
+		<ant4eclipse:executeEquinoxLauncher workspaceDirectory="${workspaceDirectory}"
+		                                    projectName="ant4eclipse-demo"
+		                                    launchConfigurationFile="${launchConfiguration.kasse}"
+		                                    targetplatformid="targetPlatform.kasse">
+
+			<!-- Copy bundles that selected in launch configuration from target platform to distribution -->
+			<forEachSelectedBundle filter="(executeEquinoxLauncher.selectedBundle.targetBundle=true)">
+				<echo> * Copy external bundle ${executeEquinoxLauncher.selectedBundle.symbolicName} to ${destinationDirectory}/plugins</echo>
+				<copy todir="${distributionDirectory}/plugins">
+					<filelist refid="executeEquinoxLauncher.resolvedBundle.fileList" />
+				</copy>
+			</forEachSelectedBundle>
+
+			<!-- populate property with selected bundles -->
+			<forEachSelectedBundle filter="(executeEquinoxLauncher.resolvedBundle.isSystemBundle=false)">
+				<append property="config_ini_osgi_bundles"
+				        value="${executeEquinoxLauncher.resolvedBundle.fileName}${executeEquinoxLauncher.selectedBundle.startParameter}"
+				        delimiter=",\${line.separator} " />
+			</forEachSelectedBundle>
+
+			<!-- determine system bundle (used to start Equinox) -->
+			<forEachSelectedBundle filter="(executeEquinoxLauncher.resolvedBundle.isSystemBundle=true)">
+				<property name="system_bundle"
+				          value="${executeEquinoxLauncher.resolvedBundle.fileName}" />
+			</forEachSelectedBundle>
+
+			<!-- generate config.ini and start scripts -->
+			<forLauncher>
+				<!-- escape all ":" with backslash as required in config.ini file-->
+				<ac:propertyregex property="config_ini_osgi_bundles_escaped"
+				                  input="${config_ini_osgi_bundles}"
+				                  regexp=":"
+				                  replace="\\\\:"
+				                  global="true" />
+
+				<!-- Copy Equinox Launcher-Jar -->
+				<copy todir="${distributionDirectory}">
+					<fileset dir="${basedir}/kasse-launching"
+					         includes="**/*.jar" />
+				</copy>
+				<!-- Copy config template files and replace properties -->
+				<copy todir="${distributionDirectory}" overwrite="true">
+					<fileset dir="${basedir}/kasse-launching"
+					         includes="**/*_template" />
+					<filterchain>
+						<expandproperties />
+					</filterchain>
+					<globmapper from="*_template" to="*" />
+				</copy>
+			</forLauncher>
+		</ant4eclipse:executeEquinoxLauncher>
+	</target>
+
+	<!--
+	 I Cleans all output folders of all projects in the workspace
+	 -->
+	<target name="clean">
+		<echo> * Cleaning workspace ${workspaceDirectory}</echo>
+		<ant4eclipse:executeProjectSet workspaceDirectory="${workspaceDirectory}"
+		                               allWorkspaceProjects="true">
+
+			<ant4eclipse:forEachProject filter="(executeProjectSet.org.eclipse.jdt.core.javanature=true)">
+				<ant4eclipse:executeJdtProject workspaceDirectory="${workspaceDirectory}"
+				                               projectName="${executeProjectSet.project.name}">
+					<forEachOutputDirectory>
+						<delete dir="${executeJdtProject.output.directory}" />
+					</forEachOutputDirectory>
+				</ant4eclipse:executeJdtProject>
+			</ant4eclipse:forEachProject>
+		</ant4eclipse:executeProjectSet>
+
+		<delete dir="${destinationDirectory}" />
+	</target>
+	
+	<!--
+	 I Starts a complete build, runs tests, build integration etc
+	 -->
+	<target name="build-all"
+	        depends="clean, build-plugins, execute-integrationtest, build-distribution">
+		<echo>  *****************************************************************  </echo>
+		<echo>  * </echo>
+		<echo>  * Plugins built to: ${destinationDirectory}/plugins</echo>
+		<echo>  * Test reports    : ${destinationDirectory}/reports</echo>
+		<echo>  * Configuration   : ${destinationDirectory}/configuration/config.ini</echo>
+		<echo>  * Start-Script    : ${destinationDirectory}/start_kasse.cmd</echo>
+		<echo>  *</echo>
+		<echo>  *****************************************************************  </echo>
+	</target>
+
+</project>
