@@ -1,0 +1,18 @@
+Step 1) Install Maven JAR org.osgiusers.germany.example.springbundlor
+cd org.osgiusers.germany.example.springbundlor
+mvn clean install
+
+Step 2) Install Platform in local Maven Repo
+cd osgi-plattform
+mvn install
+
+Step 3) Build Bundles
+cd Build
+mvn package
+
+Anmerkung:
+Die Kasse Webapp ist noch nicht in den Build integriert sonst können aber alle Bundles mit mvn package gebaut werden.
+
+Viele Grüße
+
+Christian

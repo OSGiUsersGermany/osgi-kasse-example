@@ -1,0 +1,21 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>org.osgiusers.germany</groupId>
+	<artifactId>org.osgiusers.germany.example.kasse</artifactId>
+	<version>1.0.0</version>
+	<packaging>pom</packaging>
+
+        <modules>
+		<module>../catalina.config</module>
+		<module>../JavaRuntime</module>
+		<module>../org.osgiusers.germany.example.kasse.domain</module>
+		<module>../org.osgiusers.germany.example.kasse.domain.internal</module>
+		<module>../org.osgiusers.germany.example.kasse.infrastructure.derby</module>
+		<module>../org.osgiusers.germany.example.kasse.repository.hibernate</module>
+		<module>../org.springframework.osgi.log4j.config</module>
+		<module>../server.config</module>
+        </modules>
+
+</project>
