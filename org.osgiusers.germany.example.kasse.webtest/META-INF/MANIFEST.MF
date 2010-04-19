@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Webtest
+Bundle-SymbolicName: org.osgiusers.germany.example.kasse.webtest
+Bundle-Version: 1.0.0.qualifier
+Require-Bundle: org.eclipse.core.runtime,
+ org.junit4;bundle-version="4.5.0"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-ClassPath: lib/httpunit.jar,
+ .,
+ lib/js-1.6R5.jar,
+ lib/nekohtml-0.9.5.jar,
+ lib/xercesImpl-2.6.1.jar,
+ lib/xmlParserAPIs-2.6.1.jar
+Bundle-Activator: org.osgiusers.germany.example.kasse.webtest.Activator
+Bundle-ActivationPolicy: lazy
