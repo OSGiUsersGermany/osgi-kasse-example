@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AntConfiguration">
+    <defaultAnt bundledAnt="true" />
+  </component>
+  <component name="CCaseConfig">
+    <option name="checkoutReserved" value="false" />
+    <option name="markExternalChangeAsUpToDate" value="true" />
+    <option name="checkInUseHijack" value="true" />
+    <option name="useUcmModel" value="true" />
+    <option name="isOffline" value="false" />
+    <option name="synchOutside" value="false" />
+    <option name="isHistoryResticted" value="true" />
+    <option name="useIdenticalSwitch" value="true" />
+    <option name="synchActivitiesOnRefresh" value="true" />
+    <option name="lastScr" value="" />
+    <option name="scrTextFileName" value="" />
+    <option name="historyRevisionsNumber" value="4" />
+  </component>
+  <component name="CompilerConfiguration">
+    <option name="DEFAULT_COMPILER" value="Javac" />
+    <resourceExtensions>
+      <entry name=".+\.(properties|xml|html|dtd|tld)" />
+      <entry name=".+\.(gif|png|jpeg|jpg)" />
+    </resourceExtensions>
+    <wildcardResourcePatterns>
+      <entry name="?*.properties" />
+      <entry name="?*.xml" />
+      <entry name="?*.gif" />
+      <entry name="?*.png" />
+      <entry name="?*.jpeg" />
+      <entry name="?*.jpg" />
+      <entry name="?*.html" />
+      <entry name="?*.dtd" />
+      <entry name="?*.tld" />
+      <entry name="?*.ftl" />
+      <entry name="?*.jsp" />
+    </wildcardResourcePatterns>
+    <annotationProcessing enabled="false" useClasspath="true" />
+  </component>
+  <component name="CopyrightManager" default="">
+    <module2copyright />
+  </component>
+  <component name="DependencyValidationManager">
+    <option name="SKIP_IMPORT_STATEMENTS" value="false" />
+  </component>
+  <component name="Encoding" useUTFGuessing="true" native2AsciiForPropertiesFiles="false" />
+  <component name="IdProvider" IDEtalkID="78B4F38E0A9484D29E3ACF76722F2EC9" />
+  <component name="JavadocGenerationManager">
+    <option name="OUTPUT_DIRECTORY" />
+    <option name="OPTION_SCOPE" value="protected" />
+    <option name="OPTION_HIERARCHY" value="true" />
+    <option name="OPTION_NAVIGATOR" value="true" />
+    <option name="OPTION_INDEX" value="true" />
+    <option name="OPTION_SEPARATE_INDEX" value="true" />
+    <option name="OPTION_DOCUMENT_TAG_USE" value="false" />
+    <option name="OPTION_DOCUMENT_TAG_AUTHOR" value="false" />
+    <option name="OPTION_DOCUMENT_TAG_VERSION" value="false" />
+    <option name="OPTION_DOCUMENT_TAG_DEPRECATED" value="true" />
+    <option name="OPTION_DEPRECATED_LIST" value="true" />
+    <option name="OTHER_OPTIONS" value="" />
+    <option name="HEAP_SIZE" />
+    <option name="LOCALE" />
+    <option name="OPEN_IN_BROWSER" value="true" />
+  </component>
+  <component name="Palette2">
+    <group name="Swing">
+      <item class="com.intellij.uiDesigner.HSpacer" tooltip-text="Horizontal Spacer" icon="/com/intellij/uiDesigner/icons/hspacer.png" removable="false" auto-create-binding="false" can-attach-label="false">
+        <default-constraints vsize-policy="1" hsize-policy="6" anchor="0" fill="1" />
+      </item>
+      <item class="com.intellij.uiDesigner.VSpacer" tooltip-text="Vertical Spacer" icon="/com/intellij/uiDesigner/icons/vspacer.png" removable="false" auto-create-binding="false" can-attach-label="false">
+        <default-constraints vsize-policy="6" hsize-policy="1" anchor="0" fill="2" />
+      </item>
+      <item class="javax.swing.JPanel" icon="/com/intellij/uiDesigner/icons/panel.png" removable="false" auto-create-binding="false" can-attach-label="false">
+        <default-constraints vsize-policy="3" hsize-policy="3" anchor="0" fill="3" />
+      </item>
+      <item class="javax.swing.JScrollPane" icon="/com/intellij/uiDesigner/icons/scrollPane.png" removable="false" auto-create-binding="false" can-attach-label="true">
+        <default-constraints vsize-policy="7" hsize-policy="7" anchor="0" fill="3" />
+      </item>
+      <item class="javax.swing.JButton" icon="/com/intellij/uiDesigner/icons/button.png" removable="false" auto-create-binding="true" can-attach-label="false">
+        <default-constraints vsize-policy="0" hsize-policy="3" anchor="0" fill="1" />
+        <initial-values>
+          <property name="text" value="Button" />
+        </initial-values>
+      </item>
+      <item class="javax.swing.JRadioButton" icon="/com/intellij/uiDesigner/icons/radioButton.png" removable="false" auto-create-binding="true" can-attach-label="false">
+        <default-constraints vsize-policy="0" hsize-policy="3" anchor="8" fill="0" />
+        <initial-values>
+          <property name="text" value="RadioButton" />
+        </initial-values>
+      </item>
+      <item class="javax.swing.JCheckBox" icon="/com/intellij/uiDesigner/icons/checkBox.png" removable="false" auto-create-binding="true" can-attach-label="false">
+        <default-constraints vsize-policy="0" hsize-policy="3" anchor="8" fill="0" />
+        <initial-values>
+          <property name="text" value="CheckBox" />
+        </initial-values>
+      </item>
+      <item class="javax.swing.JLabel" icon="/com/intellij/uiDesigner/icons/label.png" removable="false" auto-create-binding="false" can-attach-label="false">
+        <default-constraints vsize-policy="0" hsize-policy="0" anchor="8" fill="0" />
+        <initial-values>
+          <property name="text" value="Label" />
+        </initial-values>
+      </item>
+      <item class="javax.swing.JTextField" icon="/com/intellij/uiDesigner/icons/textField.png" removable="false" auto-create-binding="true" can-attach-label="true">
+        <default-constraints vsize-policy="0" hsize-policy="6" anchor="8" fill="1">
+          <preferred-size width="150" height="-1" />
+        </default-constraints>
+      </item>
+      <item class="javax.swing.JPasswordField" icon="/com/intellij/uiDesigner/icons/passwordField.png" removable="false" auto-create-binding="true" can-attach-label="true">
+        <default-constraints vsize-policy="0" hsize-policy="6" anchor="8" fill="1">
+          <preferred-size width="150" height="-1" />
+        </default-constraints>
+      </item>
+      <item class="javax.swing.JFormattedTextField" icon="/com/intellij/uiDesigner/icons/formattedTextField.png" removable="false" auto-create-binding="true" can-attach-label="true">
+        <default-constraints vsize-policy="0" hsize-policy="6" anchor="8" fill="1">
+          <preferred-size width="150" height="-1" />
+        </default-constraints>
+      </item>
+      <item class="javax.swing.JTextArea" icon="/com/intellij/uiDesigner/icons/textArea.png" removable="false" auto-create-binding="true" can-attach-label="true">
+        <default-constraints vsize-policy="6" hsize-policy="6" anchor="0" fill="3">
+          <preferred-size width="150" height="50" />
+        </default-constraints>
+      </item>
+      <item class="javax.swing.JTextPane" icon="/com/intellij/uiDesigner/icons/textPane.png" removable="false" auto-create-binding="true" can-attach-label="true">
+        <default-constraints vsize-policy="6" hsize-policy="6" anchor="0" fill="3">
+          <preferred-size width="150" height="50" />
+        </default-constraints>
+      </item>
+      <item class="javax.swing.JEditorPane" icon="/com/intellij/uiDesigner/icons/editorPane.png" removable="false" auto-create-binding="true" can-attach-label="true">
+        <default-constraints vsize-policy="6" hsize-policy="6" anchor="0" fill="3">
+          <preferred-size width="150" height="50" />
+        </default-constraints>
+      </item>
+      <item class="javax.swing.JComboBox" icon="/com/intellij/uiDesigner/icons/comboBox.png" removable="false" auto-create-binding="true" can-attach-label="true">
+        <default-constraints vsize-policy="0" hsize-policy="2" anchor="8" fill="1" />
+      </item>
+      <item class="javax.swing.JTable" icon="/com/intellij/uiDesigner/icons/table.png" removable="false" auto-create-binding="true" can-attach-label="false">
+        <default-constraints vsize-policy="6" hsize-policy="6" anchor="0" fill="3">
+          <preferred-size width="150" height="50" />
+        </default-constraints>
+      </item>
+      <item class="javax.swing.JList" icon="/com/intellij/uiDesigner/icons/list.png" removable="false" auto-create-binding="true" can-attach-label="false">
+        <default-constraints vsize-policy="6" hsize-policy="2" anchor="0" fill="3">
+          <preferred-size width="150" height="50" />
+        </default-constraints>
+      </item>
+      <item class="javax.swing.JTree" icon="/com/intellij/uiDesigner/icons/tree.png" removable="false" auto-create-binding="true" can-attach-label="false">
+        <default-constraints vsize-policy="6" hsize-policy="6" anchor="0" fill="3">
+          <preferred-size width="150" height="50" />
+        </default-constraints>
+      </item>
+      <item class="javax.swing.JTabbedPane" icon="/com/intellij/uiDesigner/icons/tabbedPane.png" removable="false" auto-create-binding="true" can-attach-label="false">
+        <default-constraints vsize-policy="3" hsize-policy="3" anchor="0" fill="3">
+          <preferred-size width="200" height="200" />
+        </default-constraints>
+      </item>
+      <item class="javax.swing.JSplitPane" icon="/com/intellij/uiDesigner/icons/splitPane.png" removable="false" auto-create-binding="false" can-attach-label="false">
+        <default-constraints vsize-policy="3" hsize-policy="3" anchor="0" fill="3">
+          <preferred-size width="200" height="200" />
+        </default-constraints>
+      </item>
+      <item class="javax.swing.JSpinner" icon="/com/intellij/uiDesigner/icons/spinner.png" removable="false" auto-create-binding="true" can-attach-label="true">
+        <default-constraints vsize-policy="0" hsize-policy="6" anchor="8" fill="1" />
+      </item>
+      <item class="javax.swing.JSlider" icon="/com/intellij/uiDesigner/icons/slider.png" removable="false" auto-create-binding="true" can-attach-label="false">
+        <default-constraints vsize-policy="0" hsize-policy="6" anchor="8" fill="1" />
+      </item>
+      <item class="javax.swing.JSeparator" icon="/com/intellij/uiDesigner/icons/separator.png" removable="false" auto-create-binding="false" can-attach-label="false">
+        <default-constraints vsize-policy="6" hsize-policy="6" anchor="0" fill="3" />
+      </item>
+      <item class="javax.swing.JProgressBar" icon="/com/intellij/uiDesigner/icons/progressbar.png" removable="false" auto-create-binding="true" can-attach-label="false">
+        <default-constraints vsize-policy="0" hsize-policy="6" anchor="0" fill="1" />
+      </item>
+      <item class="javax.swing.JToolBar" icon="/com/intellij/uiDesigner/icons/toolbar.png" removable="false" auto-create-binding="false" can-attach-label="false">
+        <default-constraints vsize-policy="0" hsize-policy="6" anchor="0" fill="1">
+          <preferred-size width="-1" height="20" />
+        </default-constraints>
+      </item>
+      <item class="javax.swing.JToolBar$Separator" icon="/com/intellij/uiDesigner/icons/toolbarSeparator.png" removable="false" auto-create-binding="false" can-attach-label="false">
+        <default-constraints vsize-policy="0" hsize-policy="0" anchor="0" fill="1" />
+      </item>
+      <item class="javax.swing.JScrollBar" icon="/com/intellij/uiDesigner/icons/scrollbar.png" removable="false" auto-create-binding="true" can-attach-label="false">
+        <default-constraints vsize-policy="6" hsize-policy="0" anchor="0" fill="2" />
+      </item>
+    </group>
+  </component>
+  <component name="ProjectKey">
+    <option name="state" value="project://default" />
+  </component>
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/JavaRuntime/JavaRuntime.iml" filepath="$PROJECT_DIR$/JavaRuntime/JavaRuntime.iml" />
+      <module fileurl="file://$PROJECT_DIR$/org.osgiusers.germany.example.kasse.domain/Org.osgiusers.germany.example.kasse.domain.iml" filepath="$PROJECT_DIR$/org.osgiusers.germany.example.kasse.domain/Org.osgiusers.germany.example.kasse.domain.iml" />
+      <module fileurl="file://$PROJECT_DIR$/org.osgiusers.germany.example.kasse.domain.internal/Org.osgiusers.germany.example.kasse.domain.internal.iml" filepath="$PROJECT_DIR$/org.osgiusers.germany.example.kasse.domain.internal/Org.osgiusers.germany.example.kasse.domain.internal.iml" />
+      <module fileurl="file://$PROJECT_DIR$/org.osgiusers.germany.example.kasse.domain.internal.integrationtest/Org.osgiusers.germany.example.kasse.domain.internal.integrationtest.iml" filepath="$PROJECT_DIR$/org.osgiusers.germany.example.kasse.domain.internal.integrationtest/Org.osgiusers.germany.example.kasse.domain.internal.integrationtest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/org.osgiusers.germany.example.kasse.webapp/Org.osgiusers.germany.example.kasse.webapp.iml" filepath="$PROJECT_DIR$/org.osgiusers.germany.example.kasse.webapp/Org.osgiusers.germany.example.kasse.webapp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/catalina.config/catalina.config.iml" filepath="$PROJECT_DIR$/catalina.config/catalina.config.iml" />
+      <module fileurl="file://$PROJECT_DIR$/org.springframework.osgi.log4j.config/org.springframework.osgi.log4j.config.iml" filepath="$PROJECT_DIR$/org.springframework.osgi.log4j.config/org.springframework.osgi.log4j.config.iml" />
+      <module fileurl="file://$PROJECT_DIR$/server.config/server.config.iml" filepath="$PROJECT_DIR$/server.config/server.config.iml" />
+    </modules>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_5" assert-keyword="true" jdk-15="true" project-jdk-name="1.6" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+  <component name="StarteamConfiguration">
+    <option name="SERVER" value="" />
+    <option name="PORT" value="49201" />
+    <option name="USER" value="" />
+    <option name="PASSWORD" value="" />
+    <option name="PROJECT" value="" />
+    <option name="VIEW" value="" />
+    <option name="ALTERNATIVE_WORKING_PATH" value="" />
+    <option name="LOCK_ON_CHECKOUT" value="false" />
+    <option name="UNLOCK_ON_CHECKIN" value="false" />
+  </component>
+  <component name="SvnBranchConfigurationManager">
+    <option name="mySupportsUserInfoFilter" value="true" />
+  </component>
+  <component name="VcsDirectoryMappings">
+    <mapping directory="" vcs="Git" />
+  </component>
+  <component name="WebServicesPlugin" addRequiredLibraries="true" />
+  <component name="libraryTable">
+    <library name="Target Platform">
+      <CLASSES>
+        <root url="jar://$PROJECT_DIR$/osgi-plattform/target/com.springsource.javassist-3.9.0.GA.jar!/" />
+        <root url="jar://$PROJECT_DIR$/osgi-plattform/target/catalina.start.osgi-1.0-SNAPSHOT.jar!/" />
+        <root url="jar://$PROJECT_DIR$/osgi-plattform/target/org.springframework.web.servlet-2.5.6.A.jar!/" />
+        <root url="jar://$PROJECT_DIR$/osgi-plattform/target/com.springsource.antlr-2.7.7.jar!/" />
+        <root url="jar://$PROJECT_DIR$/osgi-plattform/target/com.springsource.com.sun.el-1.0.0.jar!/" />
+        <root url="jar://$PROJECT_DIR$/osgi-plattform/target/com.springsource.javax.ejb-3.0.0.jar!/" />
+        <root url="jar://$PROJECT_DIR$/osgi-plattform/target/com.springsource.edu.oswego.cs.dl.util.concurrent-1.3.4.jar!/" />
+        <root url="jar://$PROJECT_DIR$/osgi-plattform/target/com.springsource.com.sun.faces-2.0.0.PR2.jar!/" />
+        <root url="jar://$PROJECT_DIR$/osgi-plattform/target/com.springsource.org.objectweb.asm-1.5.3.jar!/" />
+        <root url="jar://$PROJECT_DIR$/osgi-plattform/target/com.springsource.slf4j.api-1.5.10.jar!/" />
+        <root url="jar://$PROJECT_DIR$/osgi-plattform/target/com.springsource.javax.mail-1.4.0.jar!/" />
+        <root url="jar://$PROJECT_DIR$/osgi-plattform/target/com.springsource.javax.faces-2.0.0.PR2.jar!/" />
+        <root url="jar://$PROJECT_DIR$/osgi-plattform/target/org.eclipse.equinox.common-3.5.0.v20090520-1800.jar!/" />
+        <root url="jar://$PROJECT_DIR$/osgi-plattform/target/org.eclipse.equinox.ds-1.1.0.v20090520-1800.jar!/" />
+        <root url="jar://$PROJECT_DIR$/osgi-plattform/target/com.springsource.slf4j.jcl-1.5.10.jar!/" />
+        <root url="jar://$PROJECT_DIR$/osgi-plattform/target/com.springsource.slf4j.log4j-1.5.10.jar!/" />
+        <root url="jar://$PROJECT_DIR$/osgi-plattform/target/org.eclipse.osgi.services-3.2.0.v20090520-1800.jar!/" />
+        <root url="jar://$PROJECT_DIR$/osgi-plattform/target/org.springframework.osgi.mock-1.2.1.jar!/" />
+        <root url="jar://$PROJECT_DIR$/osgi-plattform/target/org.eclipse.equinox.util-1.0.100.v20090520-1800.jar!/" />
+        <root url="jar://$PROJECT_DIR$/osgi-plattform/target/org.eclipse.osgi-3.5.1.R35x_v20091005.jar!/" />
+        <root url="jar://$PROJECT_DIR$/osgi-plattform/target/com.springsource.javax.activation-1.1.1.jar!/" />
+        <root url="jar://$PROJECT_DIR$/osgi-plattform/target/org.springframework.osgi.test-1.2.1.jar!/" />
+        <root url="jar://$PROJECT_DIR$/osgi-plattform/target/org.springframework.osgi.web.extender-1.2.1.jar!/" />
+        <root url="jar://$PROJECT_DIR$/osgi-plattform/target/org.springframework.osgi.web-1.2.1.jar!/" />
+        <root url="jar://$PROJECT_DIR$/osgi-plattform/target/org.springframework.transaction-2.5.6.A.jar!/" />
+        <root url="jar://$PROJECT_DIR$/osgi-plattform/target/org.springframework.test-2.5.6.A.jar!/" />
+        <root url="jar://$PROJECT_DIR$/osgi-plattform/target/com.springsource.org.dom4j-1.6.1.jar!/" />
+        <root url="jar://$PROJECT_DIR$/osgi-plattform/target/org.springframework.web-2.5.6.A.jar!/" />
+        <root url="jar://$PROJECT_DIR$/osgi-plattform/target/org.springframework.aop-2.5.6.A.jar!/" />
+        <root url="jar://$PROJECT_DIR$/osgi-plattform/target/com.springsource.org.eclipse.persistence-1.0.0.jar!/" />
+        <root url="jar://$PROJECT_DIR$/osgi-plattform/target/com.springsource.org.apache.taglibs.standard-1.1.2.jar!/" />
+        <root url="jar://$PROJECT_DIR$/osgi-plattform/target/org.springframework.beans-2.5.6.A.jar!/" />
+        <root url="jar://$PROJECT_DIR$/osgi-plattform/target/com.springsource.org.aspectj.tools-1.6.6.RELEASE.jar!/" />
+        <root url="jar://$PROJECT_DIR$/osgi-plattform/target/com.springsource.org.apache.xmlcommons-1.3.4.jar!/" />
+        <root url="jar://$PROJECT_DIR$/osgi-plattform/target/com.springsource.org.apache.jasper-6.0.18.jar!/" />
+        <root url="jar://$PROJECT_DIR$/osgi-plattform/target/com.springsource.org.aspectj.weaver-1.6.6.RELEASE.jar!/" />
+        <root url="jar://$PROJECT_DIR$/osgi-plattform/target/com.springsource.org.apache.jasper.org.eclipse.jdt-6.0.18.jar!/" />
+        <root url="jar://$PROJECT_DIR$/osgi-plattform/target/com.springsource.org.apache.juli.extras-6.0.18.jar!/" />
+        <root url="jar://$PROJECT_DIR$/osgi-plattform/target/com.springsource.org.apache.log4j-1.2.15.jar!/" />
+        <root url="jar://$PROJECT_DIR$/osgi-plattform/target/com.springsource.org.apache.commons.pool-1.5.3.jar!/" />
+        <root url="jar://$PROJECT_DIR$/osgi-plattform/target/com.springsource.org.apache.coyote-6.0.18.jar!/" />
+        <root url="jar://$PROJECT_DIR$/osgi-plattform/target/com.springsource.org.apache.derby-10.5.1000001.764942.jar!/" />
+        <root url="jar://$PROJECT_DIR$/osgi-plattform/target/com.springsource.org.apache.el-6.0.18.jar!/" />
+        <root url="jar://$PROJECT_DIR$/osgi-plattform/target/com.springsource.org.apache.commons.dbcp-1.2.2.osgi.jar!/" />
+        <root url="jar://$PROJECT_DIR$/osgi-plattform/target/com.springsource.org.apache.commons.collections-3.2.1.jar!/" />
+        <root url="jar://$PROJECT_DIR$/osgi-plattform/target/com.springsource.org.apache.commons.logging-1.1.1.jar!/" />
+        <root url="jar://$PROJECT_DIR$/osgi-plattform/target/com.springsource.org.apache.commons.digester-1.8.0.jar!/" />
+        <root url="jar://$PROJECT_DIR$/osgi-plattform/target/com.springsource.org.aopalliance-1.0.0.jar!/" />
+        <root url="jar://$PROJECT_DIR$/osgi-plattform/target/com.springsource.net.sf.cglib-2.2.0.jar!/" />
+        <root url="jar://$PROJECT_DIR$/osgi-plattform/target/com.springsource.org.apache.commons.beanutils-1.7.0.jar!/" />
+        <root url="jar://$PROJECT_DIR$/osgi-plattform/target/com.springsource.org.apache.catalina-6.0.18.jar!/" />
+        <root url="jar://$PROJECT_DIR$/osgi-plattform/target/com.springsource.javax.el-1.0.0.jar!/" />
+        <root url="jar://$PROJECT_DIR$/osgi-plattform/target/com.springsource.org.eclipse.persistence.jpa-1.0.0.jar!/" />
+        <root url="jar://$PROJECT_DIR$/osgi-plattform/target/com.springsource.org.eclipse.persistence.asm-1.0.0.jar!/" />
+        <root url="jar://$PROJECT_DIR$/osgi-plattform/target/com.springsource.org.hibernate.annotations-3.4.0.GA.jar!/" />
+        <root url="jar://$PROJECT_DIR$/osgi-plattform/target/com.springsource.org.hibernate-3.3.2.GA.jar!/" />
+        <root url="jar://$PROJECT_DIR$/osgi-plattform/target/com.springsource.org.hibernate.ejb-3.4.0.GA.jar!/" />
+        <root url="jar://$PROJECT_DIR$/osgi-plattform/target/com.springsource.org.hibernate.annotations.common-3.3.0.ga.jar!/" />
+        <root url="jar://$PROJECT_DIR$/osgi-plattform/target/com.springsource.org.junit-4.7.0.jar!/" />
+        <root url="jar://$PROJECT_DIR$/osgi-plattform/target/com.springsource.org.jboss.util-2.0.4.GA.jar!/" />
+        <root url="jar://$PROJECT_DIR$/osgi-plattform/target/com.springsource.javax.annotation-1.0.0.jar!/" />
+        <root url="jar://$PROJECT_DIR$/osgi-plattform/target/com.springsource.javax.transaction-1.1.0.jar!/" />
+        <root url="jar://$PROJECT_DIR$/osgi-plattform/target/com.springsource.javax.xml.soap-1.3.0.jar!/" />
+        <root url="jar://$PROJECT_DIR$/osgi-plattform/target/com.springsource.javax.xml.rpc-1.1.0.jar!/" />
+        <root url="jar://$PROJECT_DIR$/osgi-plattform/target/com.springsource.javax.xml.ws-2.1.1.jar!/" />
+        <root url="jar://$PROJECT_DIR$/osgi-plattform/target/com.springsource.javax.xml.stream-1.0.1.jar!/" />
+        <root url="jar://$PROJECT_DIR$/osgi-plattform/target/com.springsource.org.eclipse.persistence.antlr-1.0.0.jar!/" />
+        <root url="jar://$PROJECT_DIR$/osgi-plattform/target/com.springsource.junit-3.8.2.jar!/" />
+        <root url="jar://$PROJECT_DIR$/osgi-plattform/target/org.springframework.osgi.extensions.annotation-1.2.1.jar!/" />
+        <root url="jar://$PROJECT_DIR$/osgi-plattform/target/org.springframework.osgi.extender-1.2.1.jar!/" />
+        <root url="jar://$PROJECT_DIR$/osgi-plattform/target/com.springsource.javax.persistence-1.99.0.jar!/" />
+        <root url="jar://$PROJECT_DIR$/osgi-plattform/target/org.springframework.osgi.io-1.2.1.jar!/" />
+        <root url="jar://$PROJECT_DIR$/osgi-plattform/target/com.springsource.javax.servlet.jsp-2.1.0.jar!/" />
+        <root url="jar://$PROJECT_DIR$/osgi-plattform/target/com.springsource.javax.servlet-2.5.0.jar!/" />
+        <root url="jar://$PROJECT_DIR$/osgi-plattform/target/com.springsource.javax.xml.bind-2.0.0.jar!/" />
+        <root url="jar://$PROJECT_DIR$/osgi-plattform/target/com.springsource.javax.servlet.jsp.jstl-1.2.0.jar!/" />
+        <root url="jar://$PROJECT_DIR$/osgi-plattform/target/org.springframework.context.support-2.5.6.A.jar!/" />
+        <root url="jar://$PROJECT_DIR$/osgi-plattform/target/org.springframework.context-2.5.6.A.jar!/" />
+        <root url="jar://$PROJECT_DIR$/osgi-plattform/target/org.springframework.jdbc-2.5.6.A.jar!/" />
+        <root url="jar://$PROJECT_DIR$/osgi-plattform/target/org.springframework.core-2.5.6.A.jar!/" />
+        <root url="jar://$PROJECT_DIR$/osgi-plattform/target/org.springframework.osgi.core-1.2.1.jar!/" />
+        <root url="jar://$PROJECT_DIR$/osgi-plattform/target/org.springframework.orm-2.5.6.A.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES />
+    </library>
+  </component>
+</project>
+
